@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday My Love 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at top, #ff9a9e, #fad0c4);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+text-align: center;
+color: white;
+}
+
+h1 {
+font-family: 'Great Vibes', cursive;
+font-size: 64px;
+margin-bottom: 10px;
+animation: fadeIn 2s ease;
+}
+
+p {
+font-size: 20px;
+margin-bottom: 40px;
+animation: fadeIn 3s ease;
+}
+
+.cake {
+position: relative;
+width: 200px;
+margin: auto;
+}
+
+.layer {
+height: 50px;
+background: #ff6f91;
+border-radius: 10px;
+margin-bottom: 5px;
+box-shadow: 0 4px #d94f70;
+}
+
+.layer:nth-child(2) {
+background: #ffc75f;
+box-shadow: 0 4px #e0a84f;
+}
+
+.layer:nth-child(3) {
+background: #f9f871;
+box-shadow: 0 4px #d1d148;
+}
+
+.candle {
+position: absolute;
+width: 10px;
+height: 40px;
+background: white;
+top: -40px;
+left: 50%;
+transform: translateX(-50%);
+border-radius: 2px;
+}
+
+.flame {
+position: absolute;
+width: 12px;
+height: 20px;
+background: radial-gradient(circle, yellow, orange);
+border-radius: 50%;
+top: -20px;
+left: -1px;
+animation: flicker 0.2s infinite alternate;
+}
+
+@keyframes flicker {
+from { transform: scale(1); opacity: 0.9; }
+to { transform: scale(1.2); opacity: 1; }
+}
+
+.heart {
+position: absolute;
+width: 20px;
+height: 20px;
+background: red;
+transform: rotate(45deg);
+animation: float 6s infinite;
+}
+
+.heart::before,
+.heart::after {
+content: "";
+position: absolute;
+width: 20px;
+height: 20px;
+background: red;
+border-radius: 50%;
+}
+
+.heart::before {
+top: -10px;
+left: 0;
+}
+
+.heart::after {
+left: -10px;
+top: 0;
+}
+
+@keyframes float {
+0% {
+transform: translateY(100vh) rotate(45deg);
+opacity: 0;
+}
+50% { opacity: 1; }
+100% {
+transform: translateY(-10vh) rotate(45deg);
+opacity: 0;
+}
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+/* Multiple floating hearts */
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 30%; animation-delay: 2s; }
+.heart:nth-child(3) { left: 50%; animation-delay: 4s; }
+.heart:nth-child(4) { left: 70%; animation-delay: 1s; }
+.heart:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+.footer {
+margin-top: 40px;
+font-size: 18px;
+opacity: 0.9;
+} </style>
+
+</head>
+<body>
+
+<div class="container">
+  <h1>Happy Birthday </h1>
+  <p>To the most amazing girl ✨</p>
+
+  <div class="cake">
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+  </div>
+
+  <div class="footer">
+    I hope the best for you today and always! 
+  </div>
+</div>
+
+<!-- Floating hearts -->
+
+<div class="heart"></div>
+<div class="heart"></div>
+<div class="heart"></div>
+<div class="heart"></div>
+<div class="heart"></div>
+
+</body>
+</html>

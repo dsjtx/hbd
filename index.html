@@ -1,10 +1,193 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-  <title>My GitHub Page</title>
+<meta charset="UTF-8">
+<title>Happy Birthday My Love 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at top, #ff9a9e, #fad0c4);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+text-align: center;
+color: white;
+}
+
+h1 {
+font-family: 'Great Vibes', cursive;
+font-size: 64px;
+}
+
+p {
+font-size: 20px;
+}
+
+.cake {
+position: relative;
+width: 200px;
+margin: 40px auto;
+}
+
+/* Cake layers */
+.layer {
+height: 50px;
+background: #ff6f91;
+border-radius: 10px;
+margin-bottom: 5px;
+box-shadow: 0 4px #d94f70;
+}
+.layer:nth-child(2) { background: #ffc75f; }
+.layer:nth-child(3) { background: #f9f871; }
+
+/* Candle */
+.candle {
+position: absolute;
+width: 10px;
+height: 40px;
+background: white;
+top: -40px;
+left: 50%;
+transform: translateX(-50%);
+}
+
+/* Flame */
+.flame {
+position: absolute;
+width: 12px;
+height: 20px;
+background: radial-gradient(circle, yellow, orange);
+border-radius: 50%;
+top: -20px;
+left: -1px;
+animation: flicker 0.2s infinite alternate;
+}
+
+/* Flicker animation */
+@keyframes flicker {
+from { transform: scale(1); opacity: 0.9; }
+to { transform: scale(1.2); opacity: 1; }
+}
+
+/* Hidden checkbox */
+#blow {
+display: none;
+}
+
+/* When clicked (checked) → flame disappears */
+#blow:checked ~ .container .flame {
+opacity: 0;
+transform: scale(0);
+transition: 0.5s;
+}
+
+/* Message appears after blowing */
+.message {
+opacity: 0;
+margin-top: 20px;
+font-size: 22px;
+transition: 0.5s;
+}
+
+#blow:checked ~ .container .message {
+opacity: 1;
+}
+
+/* Button */
+label {
+display: inline-block;
+margin-top: 20px;
+padding: 10px 20px;
+background: white;
+color: #ff6f91;
+border-radius: 20px;
+cursor: pointer;
+font-weight: bold;
+transition: 0.3s;
+}
+
+label:hover {
+background: #ffe0e6;
+}
+
+/* Floating hearts */
+.heart {
+position: absolute;
+width: 20px;
+height: 20px;
+background: red;
+transform: rotate(45deg);
+animation: float 6s infinite;
+}
+
+.heart::before,
+.heart::after {
+content: "";
+position: absolute;
+width: 20px;
+height: 20px;
+background: red;
+border-radius: 50%;
+}
+
+.heart::before { top: -10px; }
+.heart::after { left: -10px; }
+
+@keyframes float {
+0% { transform: translateY(100vh) rotate(45deg); opacity: 0; }
+50% { opacity: 1; }
+100% { transform: translateY(-10vh) rotate(45deg); opacity: 0; }
+} </style>
+
 </head>
 <body>
-  <h1>Hello World 🚀</h1>
-  <p>This is hosted on GitHub Pages</p>
+
+<!-- Hidden trigger -->
+
+<input type="checkbox" id="blow">
+
+<div class="container">
+  <h1>Happy Birthday 💖</h1>
+  <p>Make a wish... then blow the candle ✨</p>
+
+  <div class="cake">
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+  </div>
+
+  <!-- Button -->
+
+<label for="blow">Blow Candle 🎂</label>
+
+  <!-- Hidden message -->
+   
+  <h1>Happy Birthday </h1>
+  <p>To the most amazing girl ✨</p>
+  
+  <div class="footer">
+    I hope the best for you today and always! 
+  </div>
+</div>
+
+<!-- Hearts -->
+
+<div class="heart" style="left:10%"></div>
+<div class="heart" style="left:30%"></div>
+<div class="heart" style="left:50%"></div>
+<div class="heart" style="left:70%"></div>
+<div class="heart" style="left:90%"></div>
+
 </body>
 </html>
